@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Straight Arrow Custom Log Homes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Assets/Css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 20px 'Poiret One', cursive;
+    line-height: 1.8;
+    color: black;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-color: #a5b7c1; /* Gray */
+    color: #ffffff;
+  }
+  .bg-2 { 
+    background-color: #a5b7c1; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #a5b7c1; /* White */
+    color: #ffffff;
+  }
+  .bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+
+  body {overflow: hidden}
+  .content {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: blur(15px)
+  }
+
+  .box {
+      position: absolute;
+      width: 650px;
+      height: 400px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-size: cover;
+      box-shadow: 0 0 0 8px rgba(0,0,0,.3);
+      cursor: pointer
+  }
+
+  .box:before {
+      content: attr(data-content);
+      position: absolute;
+      width: 100px;
+      height: 40px;
+      top: 15px;
+      left: -8px;
+      background: #444;
+      font: 13pt Verdana;
+      color: #fff;
+      line-height: 40px;
+      text-align: center;
+  }
+
+  .box.active {animation: anim 1.2s linear}
+  @keyframes anim {
+      0% {transform:translate(-50%,-50%) scale(1);left:50%}
+      20% {transform:translate(-50%,-50%) scale(.8);left:50%}
+      50% {transform:translate(-100%,-50%) scale(.8);left:0}
+      51% {transform:translate(0,-50%) scale(.8);left:100%;opacity:0}
+      80% {transform:translate(-50%,-50%) scale(.8);left:50%}
+  }
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../public/index.html">STRAIGHT ARROW</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../public/about.html">ABOUT</a></li>
+        <li><a href="../public/homes.html">HOMES</a></li>
+        <li><a href="../public/contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content"></div>
+<div class="box"></div>
+
+<script src="../JS/script.js"></script>
+</html>
+</body>
